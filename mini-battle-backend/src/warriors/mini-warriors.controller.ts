@@ -7,6 +7,12 @@ export class WarriorsController {
     constructor(private readonly ws: WarriorsService){}
 // 
 //  See all of the boys-warriors in hub!
+    @Get("status")
+    checkStats():Promise<number[]> {
+        return this.ws.findStats()
+    }
+// 
+//  See all of the boys-warriors in hub!
     @Get()
     checkWarriors():Promise<Warrior[]> {
         return this.ws.findAll()

@@ -8,7 +8,13 @@ export class WarriorsService {
     constructor(
         @InjectModel("Warrior") private readonly warriorModel:Model<Warrior>
     ){}
-    
+    async findStats():Promise<number[]>{
+        const battle:Array<number> = []
+        battle[0] = (await this.warriorModel.find({faction: "vikings"})).length
+        battle[1] = (await this.warriorModel.find({faction: "knights"})).length
+        battle[2] = (await this.warriorModel.find({faction: "samurais"})).length
+        return battle
+    }
     async findAll():Promise<Warrior[]>{
         return await this.warriorModel.find().sort({power: -1})
     }

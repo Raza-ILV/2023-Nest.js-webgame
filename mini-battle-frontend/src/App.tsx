@@ -1,12 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// LIBS
+import { Route, Routes } from "react-router";
+
+// COMPONENTS
+import { Home } from "./pages/Home";
+import { Realm1 } from "./pages/Realm1";
+import { Realm2 } from "./pages/Realm2";
+import { Realm3 } from "./pages/Realm3";
+
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello react</h1>
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/vikings-realm" element={<Realm1 />} />
+        <Route path="/knights-realm" element={<Realm2 />} />
+        <Route path="/samurais-realm" element={<Realm3 />} />
+      </Routes>
+    </>
   );
 }
 
