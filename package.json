@@ -1,0 +1,23 @@
+{
+  "name": "warriors-nimi-battle",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently --kill-others \"cd mini-battle-backend && npm run start:dev\" \"cd mini-battle-frontend && npm run start\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Raza-ILV/Nest-ReactTS-Minigame.git"
+  },
+  "author": "Raza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Raza-ILV/Nest-ReactTS-Minigame/issues"
+  },
+  "homepage": "https://github.com/Raza-ILV/Nest-ReactTS-Minigame#readme",
+  "devDependencies": {
+    "concurrently": "^8.0.1"
+  }
+}
