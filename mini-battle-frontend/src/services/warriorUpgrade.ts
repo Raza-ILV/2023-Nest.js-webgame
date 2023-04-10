@@ -1,3 +1,4 @@
+import { K_R1_MAX_POWER, K_R2_MAX_POWER, K_R3_MAX_POWER, K_SURV_CHANCE } from "../config/CKnight";
 import { V_R1_MAX_POWER, V_R2_MAX_POWER, V_MAX_POWER_UPGRADE, V_MIN_POWER_UPGRADE, V_R3_MAX_POWER, V_SURV_CHANCE } from "../config/CViking";
 import { IWarrior } from "../interfaces/IWarrior";
 
@@ -5,6 +6,12 @@ export const warriorSurv = (warrior:IWarrior):boolean => {
     switch (warrior.faction){
         case "vikings":
             if(Math.random() * 100 < V_SURV_CHANCE){
+                return true
+            } else {
+                return false
+            }
+        case "knights":
+            if(Math.random() * 100 < K_SURV_CHANCE){
                 return true
             } else {
                 return false
@@ -41,6 +48,31 @@ export const warriorUpgrade = (warrior:IWarrior):IWarrior => {
                     NWarrior.power = warrior.power + NPower
                 } else {
                     NWarrior.power = V_R3_MAX_POWER
+                }
+            }
+            return NWarrior
+        case "knights":
+            if(warrior.rank === "knight"){
+                if(warrior.power + NPower <= K_R1_MAX_POWER){
+                    NWarrior.power = warrior.power + NPower
+                } else {
+                    NWarrior.power = warrior.power + NPower
+                    NWarrior.rank = "oficer"
+                }
+            } else 
+            if(warrior.rank === "oficer"){
+                if(warrior.power + NPower <= K_R2_MAX_POWER){
+                    NWarrior.power = warrior.power + NPower
+                } else {
+                    NWarrior.power = warrior.power + NPower
+                    NWarrior.rank = "lord"
+                }
+            } else 
+            if(warrior.rank === "lord"){
+                if(warrior.power + NPower <= K_R3_MAX_POWER){
+                    NWarrior.power = warrior.power + NPower
+                } else {
+                    NWarrior.power = K_R3_MAX_POWER
                 }
             }
             return NWarrior

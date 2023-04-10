@@ -6,18 +6,23 @@ module.exports = {
   ],
   theme: {
     extend: {},
-    screens: {
-      "xs":"250px",
-      "sm":"480px",
-      "md":"750px",
-      "lg":"1200px",
-      "xl":"1440px"
+    screens:{
+      "none": "20px",
+      "sm":"320px",
+      "md": "480px",
     },
     backgroundImage:{
+      "LVL": "url(./assets/LVL.png)",
+      "MAX": "url(./assets/MAX.png)",
+      "RIP": "url(./assets/RIP.png)",
       "berserker-e": "url(./assets/berserker_e.png)",
       "berserker": "url(./assets/berserker.png)",
       "thrall": "url(./assets/thrall.png)",
       "jarl": "url(./assets/jarl.png)",
+      "knight-e": "url(./assets/knight_e.png)",
+      "knight": "url(./assets/knight.png)",
+      "oficer": "url(./assets/oficer.png)",
+      "lord": "url(./assets/lord.png)",
     }
   },
   plugins: [],
