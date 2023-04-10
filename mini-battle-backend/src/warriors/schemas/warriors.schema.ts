@@ -12,5 +12,13 @@ export const WarriorSchema = new mongoose.Schema({
     power: {
         type: Number,
         require: true
+    },
+    firstName: {
+        type: String,
+        require: true
+    },
+    lastName: {
+        type: String,
+        require: true
     }
 }, {timestamps: true, collection: "PR5Warriors"}) 

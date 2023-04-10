@@ -16,13 +16,13 @@ export class WarriorsService {
         return battle
     }
     async findAll():Promise<Warrior[]>{
-        return await this.warriorModel.find().sort({power: -1})
+        return await this.warriorModel.find().sort({createdAt: -1})
     }
     async findFaction(faction:string):Promise<Warrior[]>{
-        return await this.warriorModel.find({faction: faction}).sort({power: -1})
+        return await this.warriorModel.find({faction: faction}).sort({createdAt: -1})
     }
     async findRank(rank:number):Promise<Warrior[]>{
-        return await this.warriorModel.find({rank: rank}).sort({power: -1})
+        return await this.warriorModel.find({rank: rank}).sort({createdAt: -1})
     }
     async findOne(id:string):Promise<Warrior>{
         return await this.warriorModel.findOne({ _id: id })
@@ -32,7 +32,8 @@ export class WarriorsService {
         return await newWarrior.save()
     }
     async upgradeRank(id:string, warrior: Warrior):Promise<Warrior>{
-            return await this.warriorModel.findByIdAndUpdate(id, warrior) 
+            await this.warriorModel.findByIdAndUpdate(id, warrior) 
+            return await warrior 
     }
     async delete(id:string){
         return await this.warriorModel.findByIdAndRemove(id)

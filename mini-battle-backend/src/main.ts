@@ -9,15 +9,12 @@ async function bootstrap() {
 
 // if "origin" existing in [whiteList] then allow
       if (whiteList.indexOf(origin) !== -1) {
-        console.log("---> Allowed cors for:", origin)
         callback(null, true)
 // else block
       } else {
-        console.log("---> blocked cors for:", origin)
         callback(new Error('Not allowed by CORS'))
       }
-
-
+      
     },
     allowedHeaders: "Content-Type",
     methods: ["GET", "POST", "PUT", "DELETE"],

@@ -1,5 +1,5 @@
-export interface Warrior {
-    id?: string
+export interface IWarrior {
+    _id?: string
     faction: string
     rank: string
     power: number
