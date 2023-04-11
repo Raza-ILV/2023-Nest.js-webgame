@@ -1,10 +1,20 @@
 # Nest-ReactTS-Minigame
 ## How to start?
+- install main packages
 ```cmd
 npm i
 ```
+- install all clieint packages
 ```cmd
-npm run start
+npm run icilent
+```
+- install all server packages
+```cmd
+npm run iserver
+```
+- start game
+```cmd
+npm run dev
 ```
 ## What is an structure?
 - Basic CRUD API
@@ -17,7 +27,3 @@ npm run start
 ## What is in .env?
 - DB_URI = my mondoDB source
 - PORT = any port you like
-## How to tyi it by yourself?
-```cmd
-npm run dev
-```
