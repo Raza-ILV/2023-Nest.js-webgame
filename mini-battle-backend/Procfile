@@ -1,0 +1,1 @@
+web: cd mini-battle-backend && npm run start:prod
