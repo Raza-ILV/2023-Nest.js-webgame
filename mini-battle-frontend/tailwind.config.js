@@ -23,6 +23,10 @@ module.exports = {
       "knight": "url(./assets/knight.png)",
       "oficer": "url(./assets/oficer.png)",
       "lord": "url(./assets/lord.png)",
+      "swordsman-e": "url(./assets/swordsman_e.png)",
+      "swordsman": "url(./assets/swordsman.png)",
+      "samurai": "url(./assets/samurai.png)",
+      "shogun": "url(./assets/shogun.png)",
     }
   },
   plugins: [],

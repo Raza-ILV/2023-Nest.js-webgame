@@ -1,4 +1,5 @@
 import { K_R1_MAX_POWER, K_R2_MAX_POWER, K_R3_MAX_POWER, K_SURV_CHANCE } from "../config/CKnight";
+import { S_R1_MAX_POWER, S_R2_MAX_POWER, S_R3_MAX_POWER, S_SURV_CHANCE } from "../config/CSamurai";
 import { V_R1_MAX_POWER, V_R2_MAX_POWER, V_MAX_POWER_UPGRADE, V_MIN_POWER_UPGRADE, V_R3_MAX_POWER, V_SURV_CHANCE } from "../config/CViking";
 import { IWarrior } from "../interfaces/IWarrior";
 
@@ -12,6 +13,12 @@ export const warriorSurv = (warrior:IWarrior):boolean => {
             }
         case "knights":
             if(Math.random() * 100 < K_SURV_CHANCE){
+                return true
+            } else {
+                return false
+            }
+        case "samurais":
+            if(Math.random() * 100 < S_SURV_CHANCE){
                 return true
             } else {
                 return false
@@ -73,6 +80,31 @@ export const warriorUpgrade = (warrior:IWarrior):IWarrior => {
                     NWarrior.power = warrior.power + NPower
                 } else {
                     NWarrior.power = K_R3_MAX_POWER
+                }
+            }
+            return NWarrior
+        case "samurais":
+            if(warrior.rank === "swordsman"){
+                if(warrior.power + NPower <= S_R1_MAX_POWER){
+                    NWarrior.power = warrior.power + NPower
+                } else {
+                    NWarrior.power = warrior.power + NPower
+                    NWarrior.rank = "samurai"
+                }
+            } else 
+            if(warrior.rank === "samurai"){
+                if(warrior.power + NPower <= S_R2_MAX_POWER){
+                    NWarrior.power = warrior.power + NPower
+                } else {
+                    NWarrior.power = warrior.power + NPower
+                    NWarrior.rank = "shogun"
+                }
+            } else 
+            if(warrior.rank === "shogun"){
+                if(warrior.power + NPower <= S_R3_MAX_POWER){
+                    NWarrior.power = warrior.power + NPower
+                } else {
+                    NWarrior.power = S_R3_MAX_POWER
                 }
             }
             return NWarrior

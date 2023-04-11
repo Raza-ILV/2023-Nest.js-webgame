@@ -14,6 +14,12 @@ export const rankToImage = (rank:string):string => {
         return "bg-oficer"
       case "lord":
         return "bg-lord"
+      case "swordsman":
+        return "bg-swordsman"
+      case "samurai":
+        return "bg-samurai"
+      case "shogun":
+        return "bg-shogun"
       default:
         return "bg-berserker"
     }
