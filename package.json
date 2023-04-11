@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "concurrently --kill-others \"cd mini-battle-backend && npm run start:dev\" \"cd mini-battle-frontend && npm run start\""
+    "iserver": "cd mini-battle-backend && npm i && cd ..",
+    "iclient": "cd mini-battle-frontend && npm i && cd .."
   },
   "repository": {
     "type": "git",
