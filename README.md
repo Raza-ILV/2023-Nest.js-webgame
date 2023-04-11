@@ -7,7 +7,7 @@ npm run i
 npm run start
 ```
 ## What is an structure?
-Basic CRUD API
+Basic CRUD API \n
 Assets folder
 Warriors component folder with all subpage components
 Config: dynamic warriors parameters
