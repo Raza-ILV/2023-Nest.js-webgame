@@ -1,19 +1,19 @@
 # Nest-ReactTS-Minigame
 ## How to start?
 - install main packages
-```cmd
+```npm
 npm i
 ```
 - install all clieint packages
-```cmd
+```npm
 npm run icilent
 ```
 - install all server packages
-```cmd
+```npm
 npm run iserver
 ```
 - start game
-```cmd
+```npm
 npm run dev
 ```
 ## What is an structure?
