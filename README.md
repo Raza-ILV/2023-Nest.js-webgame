@@ -1,5 +1,5 @@
 # Nest-ReactTS-Minigame
-- How to start?
+## How to start?
 ```cmd
 npm run i
 ```
