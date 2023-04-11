@@ -14,7 +14,6 @@ async function bootstrap() {
       } else {
         callback(new Error('Not allowed by CORS'))
       }
-      
     },
     allowedHeaders: "Content-Type",
     methods: ["GET", "POST", "PUT", "DELETE"],
