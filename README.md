@@ -16,4 +16,8 @@ npm run start
 - App.tsx contains only routing
 ## What is in .env?
 - DB_URI = my mondoDB source
-- PORT = any port u like
+- PORT = any port you like
+## How to tyi it by yourself?
+```cmd
+npm run dev
+```
